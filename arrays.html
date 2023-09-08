@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const test_array=["abraham","sam","jhon","peter","nolan",123,true,()=>{console.log("I am a function")}]//collection of anything
+         console.log(test_array)
+         const names=["abraham","sam","nolan","peter"]
+         const words=["welcome","to","the","jS","session"]
+         console.log(`length:${names.length}`)//return number elements in the array
+         console.log(names)
+         names.push("jim")// add item in the last
+         console.log(names)
+         names.unshift("alen")//add item in the front
+         console.log(names)
+         names.pop()// remove items from last
+         console.log("after pop"+names)
+         names.shift() // remove items from last
+         console.log("after shift"+names)
+         console.log(names.splice(2,2))// remove more than one element, splice(index_pos, no_of _items_tobe_deleted)
+         console.log(names)
+         console.log(words.join("_"))
+         words[3]="Javascript"
+         console.log(words)
+
+    </script>
+</body>
+</html>

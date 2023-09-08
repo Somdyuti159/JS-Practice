@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const names=["abraham","sam","nolan","peter","abdhul"]
+        //filter=> return the elements matching the given cond
+       let a_names= names.filter((name)=>name.startsWith("a"))
+       console.log(a_names)
+       let n=prompt("search name")
+       let fin_names=names.filter((name)=>name.includes(n))
+       document.write(fin_names[0])
+       //forEach will  execute the given code for each item in the array
+    document.write("<ul>")
+        names.forEach((name)=>document.write(`<li>${name}<\li>`))
+    document.write("</ul>")
+       //map will apply the code to each element and it will return the new array
+       const up_names=names.map((name)=>name.toUpperCase())
+       console.log(up_names)
+      // reduce will apply the calculation and reduce the array to a single element
+       const carItem_prices=[200,100.7,50.5,60,30] 
+       let total_cost=carItem_prices.reduce((p,a)=>a+p)
+       console.log(total_cost)
+
+       console.log(names.reduce((name,temp)=>temp+"*"+name))
+
+       /*
+        p=200, a=0
+
+        a=a+p
+
+       
+       */
+
+    </script>
+</body>
+</html>

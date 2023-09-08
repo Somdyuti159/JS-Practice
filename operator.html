@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=10
+        var b=20
+        var c=30
+        console.log(`&&=> ${a>10 && b>=15 && c<=50}`)//return true if both the cond are ture--&& will check for first false value
+        console.log(`||=> ${a>10 || b>15 || c>=50 }`) // return true if any of the cond is true-- || will check for first true value
+        console.log(`!=> ${!(a==10)}`) // return false if it is true 
+
+        //Conditional operator
+        // (cond)? statement if cond is true : statement if cond is false
+ 
+        var result=(a>b)? "a is greater" : "b is greater"
+        console.log(result)
+
+        var isSubs=false
+
+        var btn=(isSubs)?"<button>Unsubscribe</button>" : "<button>Subscribe</button>"
+
+        document.write(btn)
+
+        var firstname="jhon"
+        var lastname="karter"
+        // || operator will consider 0, false, "", null, undefined as FALSE
+        var username=firstname || lastname || "Anonymous"
+
+        document.write(`Welcome ${username}!!`)
+
+        var un=firstname && lastname &&  (firstname+lastname)
+
+        document.write(`<br> Welcome ${un}!!`)
+        
+          //nullish==>will check for only undefined and null
+
+        var fname
+
+        var uname=fname??"Anonymous"
+
+        console.log("the name is"+uname)
+
+
+
+
+    </script>
+</body>
+</html>

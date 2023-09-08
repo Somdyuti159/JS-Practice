@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object=attributes+behaviours
+        //attr=properties||values the obj can have
+        //beh=Task that an object can perform
+
+        //object literals
+        let user1={
+            firstname:"James",
+            lastname:"josling",
+            age:70,
+            fullname:function(){ return this.firstname+this.lastname},
+            hobbies:["reading","gardening"],
+            isindian:false
+        }
+        user1["age"]=80
+        console.log(user1)
+        console.log(user1.firstname)
+        console.log(user1["lastname"])
+        console.log(user1.fullname())
+
+        let user2={
+
+            fname:"christoper",
+            lname:"nolan",
+            age:55
+
+        }
+
+        console.log(user2.fname)
+        
+        //constructor function
+        function User(fname,lname,a){
+           this.firstname=fname
+           this.lastname=lname
+           this.age=a
+        }
+        
+
+        let u1=new User("james","josling",60)
+        let u2=new User("cristoper","nolan",55)
+        let u3=new User("Dennis","richie",80)
+
+        User.prototype.fullname=function(){return this.firstname+" "+this.lastname}//add new behaviour to the existing objects
+
+        console.log(u1)
+        console.log(u2)
+        console.log(u1.firstname)
+        console.log(u1.fullname())
+        console.log(u2.fullname())
+
+
+    </script>
+    
+</body>
+</html>

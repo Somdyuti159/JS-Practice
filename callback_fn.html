@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function login(un,pw,callback)
+        {
+            if(un=="jhon" && pw=="123")
+            {
+                console.log("login successfull")
+            }
+
+            callback()
+        }
+
+        login("jhon","12",()=>{console.log("sending request to server")})
+    </script>
+    
+</body>
+</html>

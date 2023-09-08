@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits=["apple","grapes","orange","pine apple"]
+        const veg=["carrot","beans","tomato"]
+        fruits[0]
+        fruits[1]
+
+        let [f1,f2]=fruits
+        console.log(f1+" "+f2)//apple,grapes
+
+        let [fr1,,fr3]=fruits
+        console.log(fr1+" "+fr3)//apple,orange
+
+        let [a,b,...c]=fruits //... is rest operator used to collect the rest of the items
+
+        console.log(a)
+        console.log(b)
+        console.log(c)
+
+        let edibles=[...fruits,...veg] //.... is a spread operator which will spread the values of array
+
+        console.log(edibles)
+
+        function display(a,...b)
+        {
+            console.log(a+" "+b)
+        }
+
+        display(1)
+        display(1,2)
+        display(1,2,3,4)
+
+
+       let [fruits1,veg1]=[veg,fruits]
+
+         console.log("fruits:"+fruits1)
+         console.log("VEg:"+veg1)
+        
+
+
+    </script>
+</body>
+</html>

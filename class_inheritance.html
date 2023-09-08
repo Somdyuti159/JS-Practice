@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     class Human{
+        constructor(fname,lname,a)
+        {
+            this.firstname=fname
+            this.lastname=lname
+            this.age=a
+        }
+     }
+
+        class Customer extends Human{
+            constructor(fname,lname,a,ano)
+            {
+                super(fname,lname,a) //call parent class constructor--return human object--linked to customer    
+                this.accno=ano
+            }
+            withdraw(){
+            console.log(this.firstname+" withdraw money..")
+            }
+            deposit(){
+                console.log(this.firstname+" deposit money..")
+
+            }
+            checkbal(){
+                console.log("displaying balance..")
+
+            }
+
+        }
+
+        class Employee extends Human{
+            constructor(fname,lname,age,sal,exp)
+            {    super(fname,lname,age)
+                this.emp_sal=sal
+                this.emp_exp=exp
+            }
+        }
+
+        let u1=new Customer("james","josling",70,1234)
+        let u2=new Customer("dennis","richie",30,12345)
+        u1.withdraw()
+        u2.withdraw()
+        console.log(u1.firstname)
+        console.log(u1.lastname)
+    </script>
+</body>
+</html>
